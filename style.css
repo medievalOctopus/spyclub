@@ -17,4 +17,6 @@ body {
 }
 a {
     color:white;
+    width:10%;
+    border:1px dotted white;
 }
