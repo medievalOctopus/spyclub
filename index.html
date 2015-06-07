@@ -3,6 +3,7 @@
 <head>
 	<link rel='stylesheet' href='style.css'/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>var say = function(speech){$("body").append("<audio autoplay><source src=http://tts-api.com/tts.mp3?q=" + escape(speech) + " type=audio/mpeg></audio>");};</script>
 </head>
 <body>
     <h1 style="font-size:50px">Braidbar Spies | Home</h1>
@@ -11,5 +12,13 @@
     		<a href="code.html">Encryptor</a>
     	</li>
     </ul>
+    <script>
+    	$(document).ready(function(){
+    		$("li").mouseOver(function(){
+    			var name = $(this).text;
+    			say(name);
+    		});
+    	});
+    </script>
 </body>
 </html>
